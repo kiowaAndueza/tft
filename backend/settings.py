@@ -15,26 +15,22 @@ from dotenv import load_dotenv
 import firebase_admin
 from firebase_admin import credentials
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-
-
 # Initialize Firebase
 load_dotenv()
-cred = credentials.Certificate(os.environ['FIREBASE_CREDENTIALS'])
-firebase_admin.initialize_app(cred)
+
+if 'DYNO' in os.environ:
+    cred = credentials.Certificate(os.environ['FIREBASE_CREDENTIALS'])
+    firebase_admin.initialize_app(cred)
 
 
 # CORS
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "*",
 ]
 
 CORS_ALLOW_HEADERS = ['Password', 'Content-Type', 'params', 'currentPassword', 'newPassword', 'content-type', 'X-RapidAPI-Key', 'X-RapidAPI-Host']
@@ -56,8 +52,7 @@ SECRET_KEY = 'django-insecure-&2rz2pb04_qgo72p05_(e96*juau#am0x=5fv69)84cyehy*c7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['react-dj-todoapp.herokuapp.com', '127.0.0.1:8000', 'localhost']
 
 # Application definition
 
@@ -84,14 +79,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,6 +101,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
