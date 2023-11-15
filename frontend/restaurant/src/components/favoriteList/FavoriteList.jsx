@@ -1,6 +1,6 @@
 import './FavoriteList.css';
 import authProvider from "../../auth/authProvider";
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { getMyFavoriteList, removeFromMyFavoriteList } from '../../services/apiService';
 import { confirmationMessage, errorMessage, successfulMessage } from '../messages/Messages';
