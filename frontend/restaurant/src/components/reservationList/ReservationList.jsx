@@ -2,7 +2,7 @@ import authProvider from "../../auth/authProvider";
 import ReservationClient from "../reservationClient/ReservationClient";
 import ReservationRestaurant from "../reservationRestaurant/ReservationRestaurant";
 import "./ReservationList.css";
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 function ReservationList() {
