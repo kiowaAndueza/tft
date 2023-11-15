@@ -31,7 +31,7 @@
     "react-range-slider-input": "^3.0.7",
     "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^3.0.1",
     "react-slider": "^2.0.6",
     "react-star-rating": "^1.4.2",
     "state-pool": "^0.10.0",
