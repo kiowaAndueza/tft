@@ -1,0 +1,24 @@
+.reservation-form {
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 1em !important;
+    border: 1px solid #EB7349;
+}
+
+
+
+.btn-reservation-form {
+    margin: 0 !important;
+    height: 3em !important;
+    background-color: #EB7349 !important;
+    border: white !important;
+    color: white;
+    width: 100% !important;
+}
+
+
+.btn-comment{
+    background-color: #EB7349 !important;
+    border: white !important;
+    width: 20%;
+}

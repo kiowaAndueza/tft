@@ -1,0 +1,28 @@
+.box-favorite-title {
+    border-radius: 0.2em;
+    background-color: #F47373 !important;
+    color: white;
+    padding: 0.4em !important;
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    -ms-border-radius: 0.2em;
+    -o-border-radius: 0.2em;
+}
+
+
+.heart-title {
+    margin-left: 0.3em !important;
+    margin-top: -0.3em !important;
+}
+
+
+.heart-myfavorite {
+    position: absolute;
+    top: 0;
+    margin-top: 0.3em !important;
+    right: 0;
+    margin-right: 0.7em !important;
+    font-size: 2em;
+    color: red !important;
+    opacity: 0.7;
+}

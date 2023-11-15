@@ -1,0 +1,25 @@
+.enabled-icon {
+    color: black;
+    cursor: pointer;
+    height: 3em;
+}
+
+.disabled-icon {
+    color: rgb(240, 240, 240);
+    cursor: pointer;
+    height: 4em;
+}
+
+
+.text-location-filter{
+    margin: 0.7em;
+    font-size: small;
+    color: rgb(32, 32, 32);
+    background-color: rgba(203, 203, 203, 0.825);
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    margin-top: -1em !important;
+}

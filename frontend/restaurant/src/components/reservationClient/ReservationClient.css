@@ -1,0 +1,17 @@
+.custom-link {
+    text-decoration: none;
+    color: white;
+}
+
+
+.custom-link:hover {
+    color: #ffcc00;
+}
+
+
+.btn-cancel-reservation{
+    margin: 0 !important;
+    width: max-content !important;
+    background-color: #fdba33 !important;
+    color: #555 !important;
+}

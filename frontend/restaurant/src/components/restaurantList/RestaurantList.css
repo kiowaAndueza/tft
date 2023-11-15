@@ -1,0 +1,160 @@
+.heart-icon {
+  position: absolute;
+  top: 0;
+  margin-top: 0.3em !important;
+  right: 0;
+  margin-right: 0.7em !important;
+  font-size: 2em;
+  color: white;
+  opacity: 0.7;
+}
+
+.star-icon {
+  opacity: 0.3;
+}
+
+.info-text-punctuation {
+  font-size: 0.8em !important;
+}
+
+.text-food-restriction,
+.info-box {
+  background-color: #fca800;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  border: 1px solid #fca800;
+  color: #fca800;
+  background-color: transparent;
+}
+
+.page-link:hover {
+  background-color: #fca800 !important;
+  color: #fff !important;
+  border-color: #fca800 !important;
+}
+
+.page-item:not(.custom-active) .page-link {
+  background-color: white;
+  border-color: #fca800 !important;
+  color: #fca800;
+}
+
+.page-item.disabled .page-link {
+  background-color: gray !important;
+  border-color: gray !important;
+  color: white !important;
+  opacity: 0.5;
+}
+
+.page-item.active .page-link {
+  background-color: #fca800 !important;
+  border-color: #fca800 !important;
+  color: white !important;
+}
+
+.custom-img {
+  width: 12em !important;
+  height: 9.8em !important;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.info-value {
+  font-size: 1.5em;
+}
+
+.rating {
+  font-size: 1.2em;
+}
+
+
+.custom-button-style {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.25rem;
+  text-align: left;
+  color: inherit;
+}
+
+.card-margin {
+  width: 50em !important;
+}
+
+.custom-button-style:hover {
+  color: #fca800;
+  cursor: pointer;
+}
+
+
+.heart-icon.liked {
+  color: red;
+}
+
+@media (max-width: 767px) {
+  .card-title {
+    font-size: 1.1em !important;
+  }
+
+  .rating {
+    font-size: 0.9em;
+  }
+
+  .opinions-text {
+    font-size: 0.7em;
+  }
+
+  .info-value {
+    font-size: 1em !important;
+  }
+
+  .food-restriction {
+    font-size: 0.8em;
+  }
+
+  .description-list-text {
+    font-size: 0.7em !important;
+  }
+
+  .heart-icon {
+    position: absolute;
+    top: 0;
+    margin-top: -0.3em !important;
+    right: 0;
+    margin-right: 0.2em !important;
+    font-size: 24px;
+    color: gray;
+    opacity: 0.7;
+  }
+
+  .pagination button.page-link {
+    font-size: 0.5em;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .card-margin {
+    width: 35em !important;
+  }
+}
+
+.rating-restaurant-list {
+  margin-top: -0.4em !important;
+}
+
+@media (max-width: 1280px) {
+  .card-margin {
+    width: 40em !important;
+  }
+}

@@ -1,0 +1,75 @@
+.client-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-header-client {
+    background-color: #F47373 !important;
+    color: #ffffff !important;
+    padding: 15px !important;
+    border-radius: 5px 5px 0 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.profile-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-icon {
+    margin-top: -0.3em !important;
+    margin-left: 0.5em;
+}
+
+.profile-title{
+    font-weight: bold;
+    border-color: #DADADA;
+    font-weight: bold;
+}
+
+input:focus {
+    box-shadow: 0 0 5px #F47373 !important;
+}
+
+.profile-image-container img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.dropzone {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.dropzone p {
+    margin: 5px 0;
+}
+
+.dropzone input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.btn-clientProfile{
+    width: 100% !important;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px 0;
+    background-color: #F47373!important;
+    border-color: #F47373 !important;
+    margin: 0;
+    margin-top: 2em;
+    padding: 0.8em !important;
+    font-size: 1.1em !important;
+}

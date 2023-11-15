@@ -1,0 +1,86 @@
+.registration-container {
+    height: 100%;
+    width: 100%;
+    min-height: calc(100vh - 56px - 164px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.registration-header h1 {
+    font-size: 4em;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.registration-header h2 {
+    font-size: 1.5em;
+    color: #666;
+    font-weight: normal;
+}
+
+.registration-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-restaurant {
+    background-color: #FDB813 !important;
+    color: #222;
+}
+
+.btn-restaurant:hover {
+    background-color: #FDB813 !important;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.btn-client {
+    background-color: #F47373 !important;
+    color: #fff;
+}
+
+.btn-client:hover {
+    background-color: #F47373 !important;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+    width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .btn-restaurant,
+    .btn-client {
+        font-size: 0.8em;
+        padding: 10px 20px;
+    }
+
+    .registration-header h1 {
+        font-size: 2em;
+    }
+
+    .registration-header h2 {
+        font-size: 0.8em;
+    }
+}

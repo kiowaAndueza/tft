@@ -1,0 +1,10 @@
+.btn-rating{
+    background-color: #EB7349 !important;
+    border: white !important;
+    color: white;
+}
+
+
+.rating-textarea{
+    resize: none;
+}

@@ -1,0 +1,29 @@
+.react-datepicker__input-container input {
+    padding: 0.7em;
+}
+
+
+.text-reservation-restaurant{
+    font-size: small;
+    padding: 0.4em;
+    color: rgb(32, 32, 32);
+    margin-top: -1em !important;
+
+}
+
+
+
+
+.restaurant-title-reservation.card-header {
+  background-color: #EB7349;
+  color: #FFF;
+}
+
+
+.btn-update-capacity {
+  padding: 0.4em !important;
+  width: 10em !important;
+  margin-top: 1.5em !important;
+  background-color: #EB7349 !important;
+  color: white !important;
+}

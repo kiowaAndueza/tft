@@ -1,0 +1,54 @@
+.container-client-form {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    border-color: #DADADA;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #F2F2F2;
+    border-color: #DADADA;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.client-title.card-header {
+    background-color: #F47373;
+    color: #FFF;
+}
+
+
+.btn-clientRegister {
+    width: 100% !important;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px 0;
+    background-color: #F47373 !important;
+    border-color: #FFA07A !important;
+    margin: 0;
+    margin-top: 2em;
+    padding: 0.8em !important;
+    font-size: 1.1em !important;
+}
+
+input:focus {
+    box-shadow: 0 0 5px #f1c40f !important;
+}
+
+.clientText {
+    font-size: 1.3em;
+    background: linear-gradient(to right, #ff6f61, #ff9b6b);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: justify;
+}

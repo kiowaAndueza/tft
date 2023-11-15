@@ -1,0 +1,68 @@
+.btn-typeCuisine {
+  background-color: #EB7349 !important;
+  border: #EB7349 !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  cursor: pointer;
+  color: white;
+}
+
+.form-control:focus, textarea:focus {
+  outline: #EB7349 !important;
+  border: 1px solid rgba(235, 115, 73, 0.5) !important;
+}
+
+.form-control, select, textarea {
+  border: 1px solid rgba(235, 115, 73, 0.5) !important;
+  outline: none !important;
+}
+
+
+.menu{
+  padding: 1em;
+  background-color: rgba(190, 177, 177, 0.362);
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+
+.btn-addDetails, .btn-addDetails:hover{
+  background-color: #fdba33 !important;
+  border: black !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  cursor: pointer;
+  color: black;
+}
+
+.opening_hours {
+  color: black !important;
+  font-size: 1em;
+  padding: 1em;
+  background-color: rgba(190, 177, 177, 0.362);
+  border-radius: 1em;
+}
+
+
+.btn-details {
+  background-color: #EB7349 !important;
+  border: #EB7349 !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  margin-left: 0.2em !important;
+  cursor: pointer;
+  color: white;
+}
+
+
+.btn-details:hover {
+  background-color: #ec551e !important;
+  border: #EB7349 !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  margin-left: 0.2em !important;
+  cursor: pointer;
+  color: white;
+}

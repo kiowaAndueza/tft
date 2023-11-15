@@ -1,0 +1,19 @@
+.rounded-image-container {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}
+
+.image-comment {
+    width: 15em;
+    height: 5em;
+}
+
+
+.rating-comment-client{
+    margin-top: -0.6em !important;
+}

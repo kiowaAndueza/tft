@@ -1,0 +1,51 @@
+.rest-title-filter {
+    background-color: white;
+    border: 1px solid #eb7349;
+}
+
+.rest-filter {
+    background-color: #eb7349;
+    padding: 1em !important;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+}
+
+.title-with-underline {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.input-group {
+    background-color: none;
+}
+
+.title-filter-text {
+    font-weight: bolder;
+}
+
+.form-range {
+    width: 60% !important;
+    height: 1.5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.btn-rest-filter {
+    margin: 0 !important;
+    color: white !important;
+    height: 3em !important;
+    background-color: black !important;
+    border: black !important;
+    width: 100% !important;
+}
+
+@media (max-width: 767px) {
+    .types-filter {
+        font-size: 0.8em;
+    }
+}

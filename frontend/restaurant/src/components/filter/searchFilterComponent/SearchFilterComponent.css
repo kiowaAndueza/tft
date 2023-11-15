@@ -1,0 +1,15 @@
+.search-filter{
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 1em !important;
+    border: 1px solid #EB7349;
+}
+
+.home-icon-filter{
+    font-size: 1em;
+    color: white;
+}
+
+.title-filter{
+    color: black !important;
+}

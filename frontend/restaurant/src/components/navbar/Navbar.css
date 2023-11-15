@@ -1,0 +1,41 @@
+#navbarNav {
+    margin-right: 2em;
+    margin-left: 1em;
+    padding: 1em;
+}
+
+.navbar-toggler-icon {
+    width: 1.1em;
+}
+
+.buttonNavbar {
+    background-color: #fdba33;
+    color: white !important;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.buttonNavbar:hover {
+    background-color: #eacc8a;
+    color: #555 !important;
+}
+
+.aNavbar {
+    background-color: #fdba33 !important;
+    width: 100%;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 0.5em 1em !important;
+    border-radius: 4px !important;
+    margin-top: 0.1em !important;
+}
+
+.aNavbar:hover {
+    background-color: #eacc8a;
+    color: #555 !important;
+    text-decoration: none;
+    cursor: pointer;
+}

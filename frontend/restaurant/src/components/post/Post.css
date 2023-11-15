@@ -1,0 +1,114 @@
+.start-post {
+    margin-top: -0.2em !important;
+    opacity: 0.3;
+    font-size: 2em;
+    margin-left: 0.1em !important;
+}
+
+
+.container-post {
+    padding: 2em;
+    border-radius: 1em;
+    background-color: white;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+
+
+.text-food-restriction-post {
+    background-color: grey !important;
+    opacity: 0.5;
+}
+
+.menu-post {
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgba(225, 225, 225, 0.2);
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+
+
+.first-start {
+    margin-left: 0.4em !important;
+}
+
+.icon-post{
+    margin-top: -0.2em !important;
+    opacity: 0.3;
+    margin-left: 0.1em !important;
+}
+
+.image-carousel{
+    width: 45em;
+    height: 28em;
+}
+
+.schedule{
+    margin-bottom: 0 !important;
+}
+
+
+.warning-text{
+    font-size: small;
+    margin-bottom: 1em;
+    background-color: rgb(255, 201, 101);
+}
+
+.total-comments{
+    margin-left: 1em !important;
+}
+
+.btn-comment-container{
+    margin-left: -1em !important;
+}
+
+@media (max-width: 767px) {
+    .start-post {
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        margin-left: 0em !important;
+        font-size: 1.4em;
+    }
+
+
+    .image-carousel{
+        width: 30em;
+        height: 18em;
+    }
+
+    .first-start {
+        margin-left: 0 !important;
+    }
+
+    .phone-post{
+        margin-top: 0.4em !important;
+    }
+
+    .restriction-post{
+        margin-bottom: 0.4em !important;
+    }
+
+    .reservation-container{
+        margin-top: 2em;
+    }
+}
+
+
+.hour-post-container{
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgba(225, 225, 225, 0.2);
+}
+
+
+@media (max-width: 1020px) {
+    .image-carousel{
+        width: 30em;
+        height: 18em;
+    }
+}
