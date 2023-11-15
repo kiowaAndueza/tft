@@ -18,6 +18,7 @@ import ReservationList from './components/reservationList/ReservationList';
 import RestaurantReview from './components/restaurantReview/RestaurantReview';
 import ClientReview from './components/clientReview/ClientReview';
 import ContactForm from './components/contactForm/ContactForm'
+import React from 'react';
 
 function App() {
   const userId = localStorage.getItem('userId');
