@@ -1,5 +1,6 @@
 {
   "name": "restaurant",
+  "main": "index.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +12,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
-    "concurrently": "^8.2.2",
     "crypto-js": "^4.1.1",
     "firebase": "^10.1.0",
     "ion-rangeslider": "^2.3.1",
@@ -31,9 +31,10 @@
     "react-range-slider-input": "^3.0.7",
     "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "5.0.1",
     "react-slider": "^2.0.6",
     "react-star-rating": "^1.4.2",
+    "serve": "^14.2.1",
     "state-pool": "^0.10.0",
     "sweetalert2": "^11.6.13",
     "web-vitals": "^2.1.4"
@@ -42,11 +43,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build && npm run export",
+    "export": "serve -s build"
   },
   "engines": {
-    "node": "16.16.0",
-    "npm": "9.1.1"
+    "node": "16.x",
+    "npm": "9.x"
   },
   "eslintConfig": {
     "extends": [
@@ -68,6 +71,7 @@
   },
   "devDependencies": {
     "@react-pdf-viewer/core": "^2.9.0",
+    "babel-loader": "^9.1.3",
     "json-loader": "^0.5.7"
   }
 }

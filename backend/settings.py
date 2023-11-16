@@ -58,7 +58,7 @@ SECRET_KEY = 'django-insecure-&2rz2pb04_qgo72p05_(e96*juau#am0x=5fv69)84cyehy*c7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://gastronet-d56d7c19b422.herokuapp.com', 'http://localhost:8000']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
