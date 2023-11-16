@@ -24,7 +24,6 @@ class ReservationDB:
         capacity_list = [{"hour": time_zone, "capacity": capacity} for time_zone in time_zones]
 
         for i in range(len(time_zones) - 1):
-            print("no llega???")
             if time_zones[i] <= reservation_hour < time_zones[i + 1]:
                 free_capacity = int(capacity) - int(data.get('numGuests'))
                 
@@ -149,36 +148,42 @@ class ReservationDB:
 
 
     def get_reservation_restaurant(self, uid, document_name, date):
-        doc_ref = FirestoreCollectionFetcher().get_document_ref('reservation', document_name)
+        collection_fetcher = FirestoreCollectionFetcher()
+
+        post_ref = collection_fetcher.get_document_ref('post', document_name)
+        doc_ref = collection_fetcher.get_document_ref('reservation', document_name)
         result = []
+        capacity_list = []
 
-        if not doc_ref.get().exists:
-            capacity_list = self.create_slots_fich(doc_ref, uid, date)
-            if capacity_list:
-                return [{"capacity": capacity_list}]
+        if post_ref.get().exists:
+            if not doc_ref.get().exists:
+                capacity_list = self.create_slots_fich(doc_ref, uid, date)
+                if capacity_list:
+                    return [{"capacity": capacity_list}]
 
-        reservation_data = doc_ref.get().to_dict()
-        capacity_list = reservation_data.get("freeCapacity", [])
-        confirmed_reservations = [res for res in reservation_data.get("reservations", []) if res.get("state") == "confirm"]
-        confirmed_reservations.sort(key=lambda res: res.get("hour"))
+            reservation_data = doc_ref.get().to_dict()
 
-        for res in confirmed_reservations:
-            client_info = UserDB().get_name_and_email_user(res["clientID"], 'clients')
-            if client_info["name"] is not None:
-                result.append({
-                    "restaurantID": uid,
-                    "clientID": res["clientID"],
-                    "name": client_info["name"],
-                    "email": client_info["email"],
-                    "hour": res["hour"],
-                    "date": date,
-                    "numGuests": res["numGuests"],
-                    "reservationMade": res["reservationMade"],
-                    "capacity": capacity_list
-                })
+            if reservation_data:
+                capacity_list = reservation_data.get("freeCapacity", [])
+                confirmed_reservations = [res for res in reservation_data.get("reservations", []) if res.get("state") == "confirm"]
+                confirmed_reservations.sort(key=lambda res: res.get("hour"))
+
+                for res in confirmed_reservations:
+                    client_info = UserDB().get_name_and_email_user(res.get("clientID"), 'clients')
+                    if client_info.get("name") is not None:
+                        result.append({
+                            "restaurantID": uid,
+                            "clientID": res.get("clientID"),
+                            "name": client_info.get("name"),
+                            "email": client_info.get("email"),
+                            "hour": res.get("hour"),
+                            "date": date,
+                            "numGuests": res.get("numGuests"),
+                            "reservationMade": res.get("reservationMade"),
+                            "capacity": capacity_list
+                        })
 
         return result or [{"capacity": capacity_list}]
-        
 
     def get_reservation_client(self, uid):
         doc_ref = FirestoreCollectionFetcher().get_document_ref('myReservations', uid)

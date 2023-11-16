@@ -48,7 +48,6 @@ function ReservationRestaurant() {
                 const reservationsOnly = reservationsData.filter(reservation => reservation.hasOwnProperty('name'));
                 setReservations(reservationsOnly);
             } catch (error) {
-                errorMessage('Error al obtener las reservas');
                 setReservations([]);
             }
         }
@@ -73,7 +72,7 @@ function ReservationRestaurant() {
             successfulMessage('Se ha modificado con éxito la capacidad para esa franja horaria')
     
         } catch (error) {
-            errorMessage('No se ha podido actualizar la capacidad')
+            console.log(error)
         }
     };
 
@@ -98,7 +97,6 @@ function ReservationRestaurant() {
                 const reservationsOnly = reservationsData.filter(reservation => reservation.hasOwnProperty('name'));
                 setReservations(reservationsOnly);
             } catch (error) {
-                errorMessage('Error al obtener las reservas')
                 console.log(error)
                 setReservations([]);
             }
