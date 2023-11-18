@@ -77,6 +77,10 @@ class UserDB:
             return {"success": False, "message": "Tipo de usuario no válido"}
         try:
             user.update(data)
+            print(data)
+            if 'email' in data:
+                user_auth = auth.get_user(uid)
+                auth.update_user(uid, email=data['email'], display_name=user_auth.display_name)
             return {"success": True}
         except Exception as e:
             return {"success": False, "message": str(e)}

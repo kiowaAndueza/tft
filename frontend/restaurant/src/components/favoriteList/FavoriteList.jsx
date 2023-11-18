@@ -259,7 +259,7 @@ function FavoriteList() {
                                                     <div className="text-end">
                                                         <div className="info-box p-1 text-white rounded">
                                                             <div className="info-value text-center">
-                                                                { restaurant.average_rating}
+                                                                { parseFloat(restaurant.average_rating).toFixed(1)}
                                                             </div>
                                                         </div>
                                                         <div className="text-muted opinions-text">

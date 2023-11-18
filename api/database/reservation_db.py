@@ -150,7 +150,7 @@ class ReservationDB:
     def get_reservation_restaurant(self, uid, document_name, date):
         collection_fetcher = FirestoreCollectionFetcher()
 
-        post_ref = collection_fetcher.get_document_ref('post', document_name)
+        post_ref = collection_fetcher.get_document_ref('post', uid)
         doc_ref = collection_fetcher.get_document_ref('reservation', document_name)
         result = []
         capacity_list = []
@@ -182,7 +182,6 @@ class ReservationDB:
                             "reservationMade": res.get("reservationMade"),
                             "capacity": capacity_list
                         })
-
         return result or [{"capacity": capacity_list}]
 
     def get_reservation_client(self, uid):

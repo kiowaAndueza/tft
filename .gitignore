@@ -1,0 +1,31 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Environment variables
+.env
+
+# Database credentials
+serviceAccountKey.json
+
+# Dependencies
+frontend/restaurant/node_modules
+frontend/restaurant/pnp
+frontend/restaurant/pnp.js
+
+# Testing
+frontend/restaurant/coverage
+
+# Production
+frontend/restaurant/build
+
+# Miscellaneous
+frontend/restaurant/.DS_Store
+frontend/restaurant/env.local
+frontend/restaurant/env.development.local
+frontend/restaurant/env.test.local
+frontend/restaurant/env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
