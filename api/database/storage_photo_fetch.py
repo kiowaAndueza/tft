@@ -127,4 +127,5 @@ class StoragePhotoFetcher:
         storage_client = storage.Client(credentials=self.credential_data)
         blob = storage_client.bucket(self.bucket_name).blob(folder_path)
         blob.upload_from_string("dummy-content")
+        blob.delete()
 

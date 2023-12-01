@@ -267,6 +267,7 @@ class PostDetailsView(APIView):
                 else:
                     return Response({'success': False}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
             else:
+                print("Errores del serializador:", post_serializer.errors)
                 return Response(post_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response(result, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

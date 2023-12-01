@@ -1,6 +1,5 @@
 from django.core.mail import send_mail
 from django.conf import settings
-from django.shortcuts import redirect
 
 class ContactManager:
     def send_email(self, origin, subject, message):

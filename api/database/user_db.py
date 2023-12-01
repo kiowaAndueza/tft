@@ -111,22 +111,3 @@ class UserDB:
             return {"name": None, "email": None}
         except Exception as e:
             return {"name": None, "email": None}
-
-
-    def delete_restaurant_user(self, idRestaurant):
-        doc_ref = FirestoreCollectionFetcher().get_user_doc_ref(idRestaurant, 'restaurants')
-        doc = doc_ref.get()
-
-        if doc.exists:
-            try:
-                auth.delete_user(idRestaurant)
-                doc_ref.delete()
-                result = True
-                if result == True:
-                    #MyFavoriteListDB().delete_favorite(idRestaurant)
-                    return True
-                return False
-            except exceptions.FirebaseError as e:
-                print(f"Error al eliminar el usuario en Firebase Authentication: {e}")
-        else:
-            return False

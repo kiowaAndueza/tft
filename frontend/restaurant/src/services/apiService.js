@@ -223,7 +223,7 @@ export const cancel_reservation_client = async (uid, restaurantID, date, numGues
   formData.append("reservationMade", reservationMade)
   const data = formData;
 
-  
+
   const config = {
     "params": {
       "uid": uid,
@@ -300,4 +300,17 @@ export const sendContact = async (formData) => {
   const url = domain + request;
 
   return await axios.post(url, formData);
+};
+
+
+export const removeFilter = async (restaurants_id) => {
+  const request = 'removedRestaurants';
+  const url = domain + request;
+  const config = {
+    params: {
+      restaurants_id: restaurants_id.join(','),
+    },
+  };
+
+  return axios.get(url, config);
 };

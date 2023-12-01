@@ -251,7 +251,7 @@ function FavoriteList() {
                                                             <Rating
                                                                 count={5}
                                                                 size={28}
-                                                                value={parseInt(restaurant.average_rating)}
+                                                                value={restaurant.average_rating}
                                                                 edit={false}
                                                             />
                                                         </div>

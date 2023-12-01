@@ -13,7 +13,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     distance_lon = lon2 - lon1
 
     a = math.sin(distance_lat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(distance_lon/2)**2
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    c = 2 * math.asin(math.sqrt(a))
     
     distance = R * c
 

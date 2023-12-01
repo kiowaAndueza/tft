@@ -270,18 +270,4 @@ class PostDB:
         else:
             return "No se encontró el documento"
 
-
-    #def delete_post(self, idRestaurant):
-     #   doc_ref = FirestoreCollectionFetcher().get_collection_ref('post', idRestaurant)
-      #  doc = doc_ref.get()
-
-       # if doc.exists:
-        #    doc_ref.delete()
-         #   ReservationDB.delete_reservation_restaurant(idRestaurant)
-          #  ReviewDB().delete_all_reviews_restaurant(idRestaurant)
-#
-            return True
- #       else:
-  #          return False
-        
     

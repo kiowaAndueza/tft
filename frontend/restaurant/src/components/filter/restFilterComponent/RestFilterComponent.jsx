@@ -67,8 +67,6 @@ export function RestFilterComponent(props) {
           (restaurant) => restaurant.restaurant_id
         );
       }
-
-      updateCurrentRestaurantIds(restaurantIds);
       updateCurrentRestaurants(restaurantData);
     } catch (error) {
       errorMessage("Error al aplicar filtros");

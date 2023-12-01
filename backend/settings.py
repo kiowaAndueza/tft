@@ -27,8 +27,6 @@ load_dotenv()
 cred = credentials.Certificate(os.environ['FIREBASE_CREDENTIALS'])
 firebase_admin.initialize_app(cred)
 
-# WhiteNoise configuration for serving static files
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 

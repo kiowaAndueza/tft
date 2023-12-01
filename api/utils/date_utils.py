@@ -1,4 +1,3 @@
-from datetime import datetime
 
 def get_day_english(day):
     days_week = {
