@@ -223,10 +223,9 @@ function RestaurantList(props) {
 
   return (
     <div className="container mt-5">
-      <div className="row d-flex justify-content-center ">
+      <div className="row">
         <div className="col-12 col-md-12 col-lg-4 mb-5 mx-auto">
           <SearchFilterComponent
-            className="mx-auto"
           />
           <RestFilterComponent
             currentRestaurantIds={initialRestaurantIds}

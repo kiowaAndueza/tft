@@ -1,7 +1,6 @@
 from .user_db import UserDB
 from .firestore_collection_fetch import FirestoreCollectionFetcher
 from .storage_photo_fetch import StoragePhotoFetcher
-from google.cloud import firestore
 from api.config.firebase_credentials import FirebaseCredentials
 
 class ReviewDB:

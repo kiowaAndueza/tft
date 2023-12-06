@@ -1,4 +1,4 @@
-from api.utils.date_utils import get_day_english
+from api.utils.date_utils import get_day_spanish
 from datetime import datetime
 from .user_db import UserDB
 from .review_db import ReviewDB
@@ -70,10 +70,9 @@ class PostDB:
 
     def check_filters(self, restaurant_id, day, hour, numGuests):
         date_obj = datetime.strptime(str(day), '%Y-%m-%d')
-        print(type(hour))
 
         day_of_week_english = date_obj.strftime('%A')
-        day_of_week_english = get_day_english(day_of_week_english)
+        day_of_week_spanish = get_day_spanish(day_of_week_english)
         
         post_data = FirestoreCollectionFetcher().get_document_ref('post', restaurant_id).get().to_dict()
         
@@ -85,7 +84,7 @@ class PostDB:
                 capacity = int(post_data.get('capacity', 0))
                 
                 if (
-                    schedule.get('day') == day_of_week_english and
+                    schedule.get('day') == day_of_week_spanish and
                     start_time <= hour <= end_time and
                     capacity >= int(numGuests)
                 ):
@@ -112,7 +111,7 @@ class PostDB:
 
 
     def get_all(self, date, hour, province, numGuests):
-        day = get_day_english(date)
+        day = get_day_spanish(date)
         restaurant_data = UserDB().get_restaurant_by_province(province)
         restaurants = self.get_restaurants_by_filters(restaurant_data, day, hour, numGuests)
         if restaurants:

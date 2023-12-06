@@ -1,9 +1,9 @@
 from .user_db import UserDB
 from .post_db import PostDB
 from datetime import datetime
-from api.utils.date_utils import get_day_english
+from api.utils.date_utils import get_day_spanish
 from .firestore_collection_fetch import FirestoreCollectionFetcher
-import re
+
 
 class ReservationDB:
     def add_reservation(self, data, document_name):
@@ -18,7 +18,7 @@ class ReservationDB:
             return False
 
     def create_reservation(self, doc_ref, data, capacity):
-        day_of_week_english = get_day_english(data.get('date').strftime('%A'))
+        day_of_week_english = get_day_spanish(data.get('date').strftime('%A'))
         time_zones = PostDB().create_time_zones(data.get('restaurantId'), day_of_week_english)
         reservation_hour = data.get('hour').strftime('%H:%M')
         capacity_list = [{"hour": time_zone, "capacity": capacity} for time_zone in time_zones]
@@ -264,7 +264,7 @@ class ReservationDB:
 
     def create_slots_fich(self, doc_ref, uid, date):
         capacity = int(PostDB().get_capacity(uid))
-        day_of_week_english = get_day_english(datetime.strptime(date, '%Y-%m-%d').strftime('%A'))
+        day_of_week_english = get_day_spanish(datetime.strptime(date, '%Y-%m-%d').strftime('%A'))
         time_zones = PostDB().create_time_zones(uid, day_of_week_english)
 
         if isinstance(time_zones, str):

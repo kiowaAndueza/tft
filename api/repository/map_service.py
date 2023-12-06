@@ -6,7 +6,6 @@ class MapService:
 
     def get_places(self, text):
         places_address = self.geolocator.geocode(text, addressdetails=True, country_codes="ES", exactly_one=False)
-        print(places_address)
 
         results = places_address
         data = []

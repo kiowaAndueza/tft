@@ -48,9 +48,6 @@ function Footer() {
               <li>
                 <a href="https://twitter.com/GastronetS34069" className="text-dark"><FaTwitter /> @GastronetS34069</a>
               </li>
-              <li>
-                <a href="#!" className="text-dark"><FaInstagram /></a>
-              </li>
             </ul>
           </div>
         </div>

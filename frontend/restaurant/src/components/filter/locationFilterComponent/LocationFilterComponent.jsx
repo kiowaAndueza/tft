@@ -67,10 +67,10 @@ function LocationFilterComponent(props) {
     <div>
       <div className="row">
         <div className="row">
-          <div className="col-3 d-flex align-items-center title-filter-text">
+          <div className="col-4 d-flex align-items-center title-filter-text">
             Ubicación:
           </div>
-          <div className="col-9">
+          <div className="col-8">
             <FaMapMarkerAlt
               className={`location-icon ${
                 isGeolocationEnabled ? "enabled-icon" : "disabled-icon"

@@ -67,6 +67,10 @@
     margin-left: -1em !important;
 }
 
+.btn-rating-1{
+    width: 100% !important;
+}
+
 @media (max-width: 767px) {
     .start-post {
         margin-top: 0.3em;

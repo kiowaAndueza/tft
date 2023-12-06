@@ -233,14 +233,14 @@ function Post(props) {
           </div>
           <div>
             <div className="row mt-4">
-              <div className="col-8 mt-3 total-comments">
+              <div className="col-7 col-xs-7 col-md-8 col-lg-8 mt-3 total-comments">
                 <small className="">Total:
                   {totalComments !== undefined && totalComments !== null && totalComments !== 0
                     ? `${totalComments}  Opiniones`
                     : ' Sin opiniones'}
                 </small>
               </div>
-              <div className="col-4 d-flex justify-content-end btn-comment-container">
+              <div className="col-3 col-xs-3 col-md-4 col-lg-4 d-flex justify-content-end btn-comment-container btn-rating-1">
                 <button className="btn btn-primary btn-comment " onClick={handleShowRatingModal}>Calificar</button>
               </div>
             </div>

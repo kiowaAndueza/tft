@@ -1,5 +1,5 @@
 
-def get_day_english(day):
+def get_day_spanish(day):
     days_week = {
         'Monday': 'Lunes',
         'Tuesday': 'Martes',
@@ -11,3 +11,4 @@ def get_day_english(day):
     }
     
     return days_week.get(day, day)
+

@@ -155,8 +155,8 @@ function ClientReview() {
     };
 
     return (
-        <div className='m-5 restaurant-review-container container ms-5'>
-            <h1 className="reservation-title col-12 col-md-auto ms-5 mb-4">Mis Reseñas</h1>
+        <div className='m-5 restaurant-review-container container ms-4'>
+            <h1 className="reservation-title col-12  ms-5 mb-4">Mis Reseñas</h1>
             <div className='comment-list-content'>
                 <div className='m-2'>
                     {currentComments.length === 0 ? (
@@ -166,7 +166,7 @@ function ClientReview() {
                             </div>
                         </div>
                     ) : (
-                        <div className="comment-list">
+                        <div className="comment-list-content col-10 col-md-12 ms-0">
                             {currentComments.map((comment, index) => (
                                 <div className="card mt-3 card-review-restaurant" key={index}>
                                     <div className="card-body">
@@ -175,8 +175,8 @@ function ClientReview() {
                                                 <div className="media">
                                                     <div className="media-body">
                                                         <div className="row">
-                                                            <h5 className="card-title col-6">{comment.nameRestaurant}</h5>
-                                                            <p className="card-text col-6 d-flex justify-content-end">Fecha: {comment.date}</p>
+                                                            <h5 className="card-title col-md-6">{comment.nameRestaurant}</h5>
+                                                            <p className="card-text col-md-6 d-flex justify-content-md-end">Fecha: {comment.date}</p>
                                                         </div>
                                                         <div className='rating-comment-client'>
                                                             <Rating
@@ -189,7 +189,7 @@ function ClientReview() {
                                                         <p className="card-text">{comment.comment}</p>
                                                         <div className="row">
                                                             <button
-                                                                className="btn btn-link text-danger card-text col-12 d-flex justify-content-end"
+                                                                className="btn btn-link text-danger card-text col-12 d-flex justify-content-md-end"
                                                                 onClick={() => handleDelete(comment.restaurantId)}
                                                             >
                                                                 <FaTrash />
@@ -209,8 +209,8 @@ function ClientReview() {
                     </div>
                 </div>
             </div>
-
         </div>
+
     );
 }
 
